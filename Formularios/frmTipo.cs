@@ -138,7 +138,7 @@ namespace Pro_Veterinaria.Formularios
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmMenu x = new frmMenu();
+            frmMenumode x = new frmMenumode();
             x.Show();
             this.Hide();
         }
