@@ -94,9 +94,15 @@ namespace Pro_Veterinaria.Formularios
 
         private void tsBuscar_Click(object sender, EventArgs e)
         {
-            
+            Busquedas.frmBusquedaTipo x = new
+                Busquedas.frmBusquedaTipo();
+            x.ShowDialog();
+            if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                txtId.Text = x.dgTipo.SelectedRows[0].Cells["id"].Value.ToString();
+                txtNombre.Text = x.dgTipo.SelectedRows[0].Cells["Nombre"].Value.ToString();
+            }
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtId.Text == "0" || txtId.Text == "")

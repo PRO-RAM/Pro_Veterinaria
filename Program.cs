@@ -17,7 +17,7 @@ namespace Pro_Veterinaria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            Application.Run(new Inicio());
         }
     }
 }
