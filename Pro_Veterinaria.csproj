@@ -55,6 +55,12 @@
     <Compile Include="Clases\ConexionSQL.cs" />
     <Compile Include="Clases\Herramientas.cs" />
     <Compile Include="Clases\Tipo.cs" />
+    <Compile Include="Formularios\frmDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDomicilio.Designer.cs">
+      <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,12 @@
     </Compile>
     <Compile Include="Formularios\frmMenumode.Designer.cs">
       <DependentUpon>frmMenumode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPagInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPagInicio.Designer.cs">
+      <DependentUpon>frmPagInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmTipo.cs">
       <SubType>Form</SubType>
@@ -84,11 +96,17 @@
     <EmbeddedResource Include="Busquedas\frmBusquedaTipo.resx">
       <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDomicilio.resx">
+      <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenumode.resx">
       <DependentUpon>frmMenumode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPagInicio.resx">
+      <DependentUpon>frmPagInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmTipo.resx">
       <DependentUpon>frmTipo.cs</DependentUpon>

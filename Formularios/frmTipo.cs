@@ -91,6 +91,7 @@ namespace Pro_Veterinaria.Formularios
             limpiar();
         
         }
+       
 
         private void tsBuscar_Click(object sender, EventArgs e)
         {
@@ -141,6 +142,11 @@ namespace Pro_Veterinaria.Formularios
             frmMenumode x = new frmMenumode();
             x.Show();
             this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

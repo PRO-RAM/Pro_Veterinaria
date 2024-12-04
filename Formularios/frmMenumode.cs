@@ -25,8 +25,20 @@ namespace Pro_Veterinaria.Formularios
         {
             Application.Exit();
         }
+        public void abrirformulario(object formopen)
+        {
+            if(this.panel12.Controls.Count > 0)
+                this.panel12.Controls.RemoveAt(0);
+            Form fh = formopen as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel12.Controls.Add(fh);
+            this.panel12.Tag = fh;
+            fh.Show();
+            
+        }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+            private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -34,9 +46,8 @@ namespace Pro_Veterinaria.Formularios
         private void btnTipo_Click(object sender, EventArgs e)
         {
             subPaciente.Visible = false;
-            frmTipo x = new frmTipo();
-            x.ShowDialog();
-            this.Hide();
+            abrirformulario(new frmTipo());
+
         }
 
         private void btnMascota_Click(object sender, EventArgs e)
@@ -58,6 +69,26 @@ namespace Pro_Veterinaria.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnCita_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            abrirformulario(new frmPagInicio());    
+
         }
     }
 }

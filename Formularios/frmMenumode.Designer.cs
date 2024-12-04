@@ -30,49 +30,53 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenumode));
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.Menu = new System.Windows.Forms.Panel();
-            this.panelCenter = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelCon = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnPacientes = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Menu = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPaciente = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnCita = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.subPaciente = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnTipo = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnMascota = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnHistorial = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnMascota = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnTipo = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCita = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnPaciente = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPacientes = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
-            this.Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Menu.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.subPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.Blue;
+            this.BarraTitulo.Controls.Add(this.panelCon);
             this.BarraTitulo.Controls.Add(this.pictureBox2);
             this.BarraTitulo.Controls.Add(this.pictureBox1);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,7 +84,38 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1300, 35);
             this.BarraTitulo.TabIndex = 0;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // panelCon
+            // 
+            this.panelCon.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelCon.Location = new System.Drawing.Point(224, 35);
+            this.panelCon.Name = "panelCon";
+            this.panelCon.Size = new System.Drawing.Size(200, 100);
+            this.panelCon.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1183, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1228, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Menu
             // 
@@ -95,80 +130,6 @@
             this.Menu.Size = new System.Drawing.Size(220, 615);
             this.Menu.TabIndex = 1;
             // 
-            // panelCenter
-            // 
-            this.panelCenter.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCenter.Location = new System.Drawing.Point(220, 35);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(1080, 615);
-            this.panelCenter.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1228, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1183, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(25, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(178, 126);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnPacientes
-            // 
-            this.btnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnPacientes.FlatAppearance.BorderSize = 0;
-            this.btnPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacientes.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnPacientes.Image = ((System.Drawing.Image)(resources.GetObject("btnPacientes.Image")));
-            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.Location = new System.Drawing.Point(18, 165);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(199, 32);
-            this.btnPacientes.TabIndex = 1;
-            this.btnPacientes.Text = "Pacientes";
-            this.btnPacientes.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Location = new System.Drawing.Point(3, 165);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 32);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.Location = new System.Drawing.Point(3, 165);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 32);
-            this.panel2.TabIndex = 2;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -182,47 +143,12 @@
             this.panel3.Size = new System.Drawing.Size(220, 615);
             this.panel3.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(18, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Pacientes";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(25, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(178, 126);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Blue;
-            this.panel4.Location = new System.Drawing.Point(3, 165);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 32);
-            this.panel4.TabIndex = 2;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panel5.Controls.Add(this.subPaciente);
             this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btnCliente);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.btnProductos);
             this.panel5.Controls.Add(this.panel6);
@@ -235,6 +161,179 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(220, 615);
             this.panel5.TabIndex = 4;
+            // 
+            // subPaciente
+            // 
+            this.subPaciente.Controls.Add(this.panel11);
+            this.subPaciente.Controls.Add(this.btnHistorial);
+            this.subPaciente.Controls.Add(this.panel9);
+            this.subPaciente.Controls.Add(this.btnMascota);
+            this.subPaciente.Controls.Add(this.panel10);
+            this.subPaciente.Controls.Add(this.btnTipo);
+            this.subPaciente.Location = new System.Drawing.Point(20, 203);
+            this.subPaciente.Name = "subPaciente";
+            this.subPaciente.Size = new System.Drawing.Size(200, 124);
+            this.subPaciente.TabIndex = 0;
+            this.subPaciente.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Blue;
+            this.panel11.Location = new System.Drawing.Point(1, 79);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 32);
+            this.panel11.TabIndex = 10;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.Location = new System.Drawing.Point(18, 79);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(182, 32);
+            this.btnHistorial.TabIndex = 9;
+            this.btnHistorial.Text = "Historial Medico";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Blue;
+            this.panel9.Location = new System.Drawing.Point(1, 41);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 32);
+            this.panel9.TabIndex = 8;
+            // 
+            // btnMascota
+            // 
+            this.btnMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnMascota.FlatAppearance.BorderSize = 0;
+            this.btnMascota.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMascota.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMascota.ForeColor = System.Drawing.Color.White;
+            this.btnMascota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMascota.Location = new System.Drawing.Point(18, 41);
+            this.btnMascota.Name = "btnMascota";
+            this.btnMascota.Size = new System.Drawing.Size(182, 32);
+            this.btnMascota.TabIndex = 7;
+            this.btnMascota.Text = "Mascota";
+            this.btnMascota.UseVisualStyleBackColor = false;
+            this.btnMascota.Click += new System.EventHandler(this.btnMascota_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Blue;
+            this.panel10.Location = new System.Drawing.Point(1, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 32);
+            this.panel10.TabIndex = 6;
+            // 
+            // btnTipo
+            // 
+            this.btnTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnTipo.FlatAppearance.BorderSize = 0;
+            this.btnTipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipo.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipo.ForeColor = System.Drawing.Color.White;
+            this.btnTipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipo.Location = new System.Drawing.Point(10, 3);
+            this.btnTipo.Name = "btnTipo";
+            this.btnTipo.Size = new System.Drawing.Size(182, 32);
+            this.btnTipo.TabIndex = 5;
+            this.btnTipo.Text = "Tipo";
+            this.btnTipo.UseVisualStyleBackColor = false;
+            this.btnTipo.Click += new System.EventHandler(this.btnTipo_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Blue;
+            this.panel8.Location = new System.Drawing.Point(0, 432);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 32);
+            this.panel8.TabIndex = 8;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(15, 432);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(199, 32);
+            this.btnCliente.TabIndex = 7;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Blue;
+            this.panel7.Location = new System.Drawing.Point(0, 381);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 32);
+            this.panel7.TabIndex = 6;
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(15, 381);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(199, 32);
+            this.btnProductos.TabIndex = 5;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Blue;
+            this.panel6.Location = new System.Drawing.Point(0, 333);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 32);
+            this.panel6.TabIndex = 4;
+            // 
+            // btnCita
+            // 
+            this.btnCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCita.FlatAppearance.BorderSize = 0;
+            this.btnCita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCita.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCita.ForeColor = System.Drawing.Color.White;
+            this.btnCita.Image = ((System.Drawing.Image)(resources.GetObject("btnCita.Image")));
+            this.btnCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCita.Location = new System.Drawing.Point(15, 333);
+            this.btnCita.Name = "btnCita";
+            this.btnCita.Size = new System.Drawing.Size(199, 32);
+            this.btnCita.TabIndex = 3;
+            this.btnCita.Text = "Cita";
+            this.btnCita.UseVisualStyleBackColor = false;
+            this.btnCita.Click += new System.EventHandler(this.btnCita_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Blue;
+            this.panel4.Location = new System.Drawing.Point(3, 165);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 32);
+            this.panel4.TabIndex = 2;
             // 
             // btnPaciente
             // 
@@ -263,192 +362,121 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // btnCita
+            // panel2
             // 
-            this.btnCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCita.FlatAppearance.BorderSize = 0;
-            this.btnCita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCita.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCita.ForeColor = System.Drawing.Color.White;
-            this.btnCita.Image = ((System.Drawing.Image)(resources.GetObject("btnCita.Image")));
-            this.btnCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCita.Location = new System.Drawing.Point(15, 333);
-            this.btnCita.Name = "btnCita";
-            this.btnCita.Size = new System.Drawing.Size(199, 32);
-            this.btnCita.TabIndex = 3;
-            this.btnCita.Text = "Cita";
-            this.btnCita.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.Blue;
+            this.panel2.Location = new System.Drawing.Point(3, 165);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 32);
+            this.panel2.TabIndex = 2;
             // 
-            // panel6
+            // button1
             // 
-            this.panel6.BackColor = System.Drawing.Color.Blue;
-            this.panel6.Location = new System.Drawing.Point(0, 333);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 32);
-            this.panel6.TabIndex = 4;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(18, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Pacientes";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // panel7
+            // pictureBox4
             // 
-            this.panel7.BackColor = System.Drawing.Color.Blue;
-            this.panel7.Location = new System.Drawing.Point(0, 381);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(5, 32);
-            this.panel7.TabIndex = 6;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(25, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(178, 126);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
-            // btnProductos
+            // panel1
             // 
-            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(15, 381);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(199, 32);
-            this.btnProductos.TabIndex = 5;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.Location = new System.Drawing.Point(3, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 32);
+            this.panel1.TabIndex = 2;
             // 
-            // panel8
+            // btnPacientes
             // 
-            this.panel8.BackColor = System.Drawing.Color.Blue;
-            this.panel8.Location = new System.Drawing.Point(0, 432);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 32);
-            this.panel8.TabIndex = 8;
+            this.btnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPacientes.FlatAppearance.BorderSize = 0;
+            this.btnPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPacientes.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPacientes.ForeColor = System.Drawing.Color.White;
+            this.btnPacientes.Image = ((System.Drawing.Image)(resources.GetObject("btnPacientes.Image")));
+            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPacientes.Location = new System.Drawing.Point(18, 165);
+            this.btnPacientes.Name = "btnPacientes";
+            this.btnPacientes.Size = new System.Drawing.Size(199, 32);
+            this.btnPacientes.TabIndex = 1;
+            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // pictureBox3
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 432);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(199, 32);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Pacientes";
-            this.button5.UseVisualStyleBackColor = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(25, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(178, 126);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
-            // subPaciente
+            // panel12
             // 
-            this.subPaciente.Controls.Add(this.panel11);
-            this.subPaciente.Controls.Add(this.btnHistorial);
-            this.subPaciente.Controls.Add(this.panel9);
-            this.subPaciente.Controls.Add(this.btnMascota);
-            this.subPaciente.Controls.Add(this.panel10);
-            this.subPaciente.Controls.Add(this.btnTipo);
-            this.subPaciente.Location = new System.Drawing.Point(20, 203);
-            this.subPaciente.Name = "subPaciente";
-            this.subPaciente.Size = new System.Drawing.Size(200, 124);
-            this.subPaciente.TabIndex = 0;
-            this.subPaciente.Visible = false;
+            this.panel12.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel12.Controls.Add(this.label1);
+            this.panel12.Location = new System.Drawing.Point(219, 35);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1081, 615);
+            this.panel12.TabIndex = 2;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
-            // panel10
+            // label1
             // 
-            this.panel10.BackColor = System.Drawing.Color.Blue;
-            this.panel10.Location = new System.Drawing.Point(1, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 32);
-            this.panel10.TabIndex = 6;
-            // 
-            // btnTipo
-            // 
-            this.btnTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnTipo.FlatAppearance.BorderSize = 0;
-            this.btnTipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipo.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipo.ForeColor = System.Drawing.Color.White;
-            this.btnTipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipo.Location = new System.Drawing.Point(16, 3);
-            this.btnTipo.Name = "btnTipo";
-            this.btnTipo.Size = new System.Drawing.Size(182, 32);
-            this.btnTipo.TabIndex = 5;
-            this.btnTipo.Text = "Tipo";
-            this.btnTipo.UseVisualStyleBackColor = false;
-            this.btnTipo.Click += new System.EventHandler(this.btnTipo_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Blue;
-            this.panel9.Location = new System.Drawing.Point(1, 41);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 32);
-            this.panel9.TabIndex = 8;
-            // 
-            // btnMascota
-            // 
-            this.btnMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnMascota.FlatAppearance.BorderSize = 0;
-            this.btnMascota.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMascota.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMascota.ForeColor = System.Drawing.Color.White;
-            this.btnMascota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMascota.Location = new System.Drawing.Point(18, 41);
-            this.btnMascota.Name = "btnMascota";
-            this.btnMascota.Size = new System.Drawing.Size(182, 32);
-            this.btnMascota.TabIndex = 7;
-            this.btnMascota.Text = "Mascota";
-            this.btnMascota.UseVisualStyleBackColor = false;
-            this.btnMascota.Click += new System.EventHandler(this.btnMascota_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Blue;
-            this.panel11.Location = new System.Drawing.Point(1, 79);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 32);
-            this.panel11.TabIndex = 10;
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorial.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.White;
-            this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.Location = new System.Drawing.Point(18, 79);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(182, 32);
-            this.btnHistorial.TabIndex = 9;
-            this.btnHistorial.Text = "Historial Medico";
-            this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(210, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(704, 87);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "¡¡BIENBENIDO¡¡";
             // 
             // frmMenumode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
-            this.Controls.Add(this.panelCenter);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenumode";
             this.Text = "frmMenumode";
             this.BarraTitulo.ResumeLayout(false);
-            this.Menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Menu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.subPaciente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -459,7 +487,6 @@
         private System.Windows.Forms.Panel Menu;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelCenter;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Panel panel1;
@@ -469,7 +496,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panel6;
@@ -484,5 +511,8 @@
         private System.Windows.Forms.Button btnMascota;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Panel panelCon;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label1;
     }
 }

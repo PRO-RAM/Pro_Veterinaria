@@ -52,6 +52,7 @@ namespace Pro_Veterinaria.Formularios
         {
             label1.BackColor = Color.Transparent;
         }
+        
 
         private void Inicio_Load(object sender, EventArgs e)
         {
@@ -65,12 +66,14 @@ namespace Pro_Veterinaria.Formularios
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if(encontro() == true)
+            
+            if (encontro() == true)
             {
                 MessageBox.Show("Bienvenido");
                 frmMenumode x = new frmMenumode();
                 x.ShowDialog();
                 this.Hide();
+                
             }
             else
             {
@@ -137,6 +140,11 @@ namespace Pro_Veterinaria.Formularios
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
