@@ -53,6 +53,7 @@
       <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ConexionSQL.cs" />
+    <Compile Include="Clases\Domicilio.cs" />
     <Compile Include="Clases\Herramientas.cs" />
     <Compile Include="Clases\Tipo.cs" />
     <Compile Include="Formularios\frmDomicilio.cs">

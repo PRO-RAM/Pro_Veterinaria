@@ -16,6 +16,7 @@ namespace Pro_Veterinaria.Formularios
         public frmMenumode()
         {
             InitializeComponent();
+            this.toolTip1.SetToolTip(this.pictureBox5, "Inicio");
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")] private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -88,6 +89,37 @@ namespace Pro_Veterinaria.Formularios
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             abrirformulario(new frmPagInicio());    
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            subCliente.Visible = true;
+        }
+
+        private void btnDomicilio_Click(object sender, EventArgs e)
+        {
+            subCliente.Visible = false;
+            abrirformulario(new frmDomicilio());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            subCliente.Visible = false;
+        }
+
+        private void subPaciente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
