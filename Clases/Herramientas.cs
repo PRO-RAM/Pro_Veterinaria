@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pro_Veterinaria.Clases
 {
-    internal class Herramientas
+    public class Herramientas
     {
         ConexionSQL x = new ConexionSQL();
         SqlConnection con = new SqlConnection();
@@ -28,6 +28,20 @@ namespace Pro_Veterinaria.Clases
             }
             con.Close();
             return id;
+        }
+        public bool encontrar(string tabla, int id)
+        {
+            bool a = false;
+            string query = $"select * from {tabla} where id = {id}";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                a = true;
+            }
+            con.Close();
+            return a;
         }
     }
 }

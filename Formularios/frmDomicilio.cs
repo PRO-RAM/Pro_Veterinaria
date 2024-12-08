@@ -52,25 +52,25 @@ namespace Pro_Veterinaria.Formularios
             Clases.Herramientas x = new Clases.Herramientas();
             txtId.Text = x.consecutivo("id", "Domicilio").ToString();
         }
-        bool encontro()
-        {
-            bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"select * from Domicilio where id = '{id}'";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
-            {
-                a = true;
-            }
-            else
-            {
-                a = false;
-            }
-            con.Close();
-            return a;
-        }
+        //bool encontro()
+        //{
+        //    bool a = false;
+        //    int id = int.Parse(txtId.Text);
+        //    string cadena = $"select * from Domicilio where id = '{id}'";
+        //    con.Open();
+        //    SqlCommand cmd = new SqlCommand(cadena, con);
+        //    SqlDataReader lector = cmd.ExecuteReader();
+        //    if (lector.Read())
+        //    {
+        //        a = true;
+        //    }
+        //    else
+        //    {
+        //        a = false;
+        //    }
+        //    con.Close();
+        //    return a;
+        //}
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -97,14 +97,15 @@ namespace Pro_Veterinaria.Formularios
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
+            Herramientas h = new Herramientas();
             Clases.Domicilio x = new Clases.Domicilio();
             x.id = int.Parse(txtId.Text);
             x.Calle = txtCalle.Text;
             x.Referencias = txtReferencias.Text;
             x.Ninterior = txtN_interior.Text;
             x.Nexterior = txtN_exterior.Text;
-            x.Colonia = txtColonia.Text; 
-            if (encontro() == true)
+            x.Colonia = txtColonia.Text;
+            if (h.encontrar("Domicilio", int.Parse(txtId.Text))== true)
             {
                 MessageBox.Show(x.actualizar());
             }
@@ -123,9 +124,10 @@ namespace Pro_Veterinaria.Formularios
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
+            Herramientas h = new Herramientas();
             Clases.Domicilio x = new Clases.Domicilio();
             x.id = int.Parse(txtId.Text);
-            if (encontro() == true)
+            if (h.encontrar("Domicilio", int.Parse(txtId.Text)))
             {
                 MessageBox.Show(x.eliminar());
                 MessageBox.Show("Se elimino el registro.");
@@ -135,6 +137,28 @@ namespace Pro_Veterinaria.Formularios
                 MessageBox.Show("No se encontro el elemento a eliminar");
             }
             limpiar();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tsBuscar_Click(object sender, EventArgs e)
+        {
+            Busquedas.frmBusquedaDomicilio x = new
+                Busquedas.frmBusquedaDomicilio();
+            x.ShowDialog();
+            if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                txtId.Text = x.dgDomicilio.SelectedRows[0].Cells["id"].Value.ToString();
+                txtCalle.Text = x.dgDomicilio.SelectedRows[0].Cells["Calle"].Value.ToString();
+                txtN_interior.Text = x.dgDomicilio.SelectedRows[0].Cells["N_int"].Value.ToString();
+                txtN_exterior.Text = x.dgDomicilio.SelectedRows[0].Cells["N_ext"].Value.ToString();
+                txtReferencias.Text = x.dgDomicilio.SelectedRows[0].Cells["Referencias"].Value.ToString();
+               txtColonia.Text = x.dgDomicilio.SelectedRows[0].Cells["Colonia"].Value.ToString();
+                
+            }
         }
     }
 }

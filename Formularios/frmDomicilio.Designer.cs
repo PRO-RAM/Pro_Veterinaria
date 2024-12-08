@@ -131,6 +131,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 39);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsGuardar
             // 
@@ -152,6 +153,7 @@
             this.tsBuscar.Name = "tsBuscar";
             this.tsBuscar.Size = new System.Drawing.Size(36, 36);
             this.tsBuscar.Text = "Buscar";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 

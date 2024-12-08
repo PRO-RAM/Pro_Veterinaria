@@ -54,6 +54,7 @@ namespace Pro_Veterinaria.Formularios
         private void btnMascota_Click(object sender, EventArgs e)
         {
             subPaciente.Visible = false;
+            
         }
 
         private void btnHistorial_Click(object sender, EventArgs e)
@@ -111,6 +112,7 @@ namespace Pro_Veterinaria.Formularios
         private void button3_Click(object sender, EventArgs e)
         {
             subCliente.Visible = false;
+            abrirformulario(new frmMascota());
         }
 
         private void subPaciente_Paint(object sender, PaintEventArgs e)
