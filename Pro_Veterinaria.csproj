@@ -62,6 +62,9 @@
     <Compile Include="Clases\ConexionSQL.cs" />
     <Compile Include="Clases\Domicilio.cs" />
     <Compile Include="Clases\Herramientas.cs" />
+    <Compile Include="Clases\Mascota.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Clases\Tipo.cs" />
     <Compile Include="Formularios\frmDomicilio.cs">
       <SubType>Form</SubType>
@@ -74,6 +77,12 @@
     </Compile>
     <Compile Include="Formularios\frmMascota.Designer.cs">
       <DependentUpon>frmMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMascotaYes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMascotaYes.Designer.cs">
+      <DependentUpon>frmMascotaYes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
@@ -93,11 +102,29 @@
     <Compile Include="Formularios\frmPagInicio.Designer.cs">
       <DependentUpon>frmPagInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmServicio.Designer.cs">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmTipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmTipo.Designer.cs">
       <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmVacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVacuna.Designer.cs">
+      <DependentUpon>frmVacuna.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Inicio.cs">
       <SubType>Form</SubType>
@@ -119,6 +146,9 @@
     <EmbeddedResource Include="Formularios\frmMascota.resx">
       <DependentUpon>frmMascota.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMascotaYes.resx">
+      <DependentUpon>frmMascotaYes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +158,17 @@
     <EmbeddedResource Include="Formularios\frmPagInicio.resx">
       <DependentUpon>frmPagInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmServicio.resx">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmTipo.resx">
       <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVacuna.resx">
+      <DependentUpon>frmVacuna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
