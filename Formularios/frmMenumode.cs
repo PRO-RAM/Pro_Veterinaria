@@ -76,6 +76,7 @@ namespace Pro_Veterinaria.Formularios
 
         private void btnCita_Click(object sender, EventArgs e)
         {
+            abrirformulario(new frmCita());
         }
 
         private void panel12_Paint(object sender, PaintEventArgs e)
@@ -134,6 +135,16 @@ namespace Pro_Veterinaria.Formularios
         private void btnProductos_Click(object sender, EventArgs e)
         {
             abrirformulario(new frmProducto());
+        }
+
+        private void btnVacuna_Click(object sender, EventArgs e)
+        {
+            abrirformulario(new dtpCaducidad());
+        }
+
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+            abrirformulario(new frmEmpleado());
         }
     }
 }

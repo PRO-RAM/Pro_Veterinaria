@@ -72,6 +72,7 @@
             this.tsGuardar.Name = "tsGuardar";
             this.tsGuardar.Size = new System.Drawing.Size(36, 36);
             this.tsGuardar.Text = "Guardar";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -92,6 +93,7 @@
             this.tsLimpiar.Name = "tsLimpiar";
             this.tsLimpiar.Size = new System.Drawing.Size(36, 36);
             this.tsLimpiar.Text = "Limpiar";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -102,12 +104,13 @@
             this.tsEliminar.Name = "tsEliminar";
             this.tsEliminar.Size = new System.Drawing.Size(36, 36);
             this.tsEliminar.Text = "Eliminar";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 78);
+            this.label1.Location = new System.Drawing.Point(378, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 28);
             this.label1.TabIndex = 10;
@@ -117,7 +120,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(359, 137);
+            this.label2.Location = new System.Drawing.Point(361, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 28);
             this.label2.TabIndex = 11;
@@ -127,7 +130,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(359, 184);
+            this.label3.Location = new System.Drawing.Point(378, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 28);
             this.label3.TabIndex = 12;
@@ -137,7 +140,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(359, 237);
+            this.label4.Location = new System.Drawing.Point(339, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 28);
             this.label4.TabIndex = 13;
@@ -147,7 +150,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(359, 281);
+            this.label5.Location = new System.Drawing.Point(378, 410);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 28);
             this.label5.TabIndex = 14;
@@ -156,33 +159,33 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(407, 81);
+            this.txtId.Location = new System.Drawing.Point(468, 142);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(170, 35);
+            this.txtId.Size = new System.Drawing.Size(207, 35);
             this.txtId.TabIndex = 15;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(452, 134);
+            this.txtNombre.Location = new System.Drawing.Point(469, 215);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(169, 35);
+            this.txtNombre.Size = new System.Drawing.Size(206, 35);
             this.txtNombre.TabIndex = 16;
             // 
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(421, 181);
+            this.txtTipo.Location = new System.Drawing.Point(469, 278);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(156, 35);
+            this.txtTipo.Size = new System.Drawing.Size(206, 35);
             this.txtTipo.TabIndex = 17;
             // 
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(438, 281);
+            this.txtStock.Location = new System.Drawing.Point(469, 407);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(163, 35);
+            this.txtStock.Size = new System.Drawing.Size(206, 35);
             this.txtStock.TabIndex = 19;
             // 
             // button1
@@ -191,27 +194,29 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(384, 355);
+            this.button1.Location = new System.Drawing.Point(440, 464);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 48);
+            this.button1.Size = new System.Drawing.Size(265, 48);
             this.button1.TabIndex = 20;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(471, 232);
+            this.dateTimePicker1.Location = new System.Drawing.Point(469, 339);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(206, 35);
             this.dateTimePicker1.TabIndex = 21;
             // 
             // dtpCaducidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(800, 471);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtStock);
@@ -227,6 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dtpCaducidad";
             this.Text = "frmVacuna";
+            this.Load += new System.EventHandler(this.dtpCaducidad_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
