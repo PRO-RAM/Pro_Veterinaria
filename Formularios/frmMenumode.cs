@@ -17,6 +17,7 @@ namespace Pro_Veterinaria.Formularios
         {
             InitializeComponent();
             this.toolTip1.SetToolTip(this.pictureBox5, "Inicio");
+            this.toolTip1.SetToolTip(this.pictureBox7, "Cerar Cecion");
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")] private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -146,6 +147,21 @@ namespace Pro_Veterinaria.Formularios
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
             abrirformulario(new frmEmpleado());
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            frmMenumode g = new frmMenumode();
+            this.Hide();
+
+           Inicio h = new Inicio();
+            h.ShowDialog();
+        }
+
+        private void btnReceta_Click(object sender, EventArgs e)
+        {
+            Busquedas.frmReceta x = new Busquedas.frmReceta();
+            x.ShowDialog();
         }
     }
 }

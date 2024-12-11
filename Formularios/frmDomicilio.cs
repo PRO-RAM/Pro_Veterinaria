@@ -52,6 +52,7 @@ namespace Pro_Veterinaria.Formularios
             Clases.Herramientas x = new Clases.Herramientas();
             txtId.Text = x.consecutivo("id", "Domicilio").ToString();
         }
+
         //bool encontro()
         //{
         //    bool a = false;

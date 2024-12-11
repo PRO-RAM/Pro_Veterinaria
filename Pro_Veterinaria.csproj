@@ -58,6 +58,12 @@
     <Compile Include="Busquedas\frmBusquedaTipo.Designer.cs">
       <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busquedas\frmReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmReceta.Designer.cs">
+      <DependentUpon>frmReceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cita.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ConexionSQL.cs" />
@@ -67,6 +73,7 @@
     <Compile Include="Clases\Historial.cs" />
     <Compile Include="Clases\Mascota.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Receta.cs" />
     <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Clases\Tipo.cs" />
     <Compile Include="Clases\Vacuna.cs" />
@@ -161,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaTipo.resx">
       <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmReceta.resx">
+      <DependentUpon>frmReceta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCita.resx">
       <DependentUpon>frmCita.cs</DependentUpon>

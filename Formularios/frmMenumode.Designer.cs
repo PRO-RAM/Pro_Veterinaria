@@ -42,7 +42,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.btnSubCliente = new System.Windows.Forms.Button();
             this.btnDomicilio = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.subPaciente = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnMascota = new System.Windows.Forms.Button();
             this.btnTipo = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnVacuna = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -73,6 +73,9 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnReceta = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -164,6 +168,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panel5.Controls.Add(this.subCliente);
+            this.panel5.Controls.Add(this.btnReceta);
+            this.panel5.Controls.Add(this.panel18);
+            this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.subPaciente);
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.btnEmpleado);
@@ -193,9 +200,9 @@
             this.subCliente.Controls.Add(this.panel17);
             this.subCliente.Controls.Add(this.btnSubCliente);
             this.subCliente.Controls.Add(this.btnDomicilio);
-            this.subCliente.Location = new System.Drawing.Point(2, 453);
+            this.subCliente.Location = new System.Drawing.Point(1, 453);
             this.subCliente.Name = "subCliente";
-            this.subCliente.Size = new System.Drawing.Size(200, 81);
+            this.subCliente.Size = new System.Drawing.Size(200, 93);
             this.subCliente.TabIndex = 2;
             this.subCliente.Visible = false;
             // 
@@ -248,14 +255,6 @@
             this.btnDomicilio.Text = "Domicilio";
             this.btnDomicilio.UseVisualStyleBackColor = false;
             this.btnDomicilio.Click += new System.EventHandler(this.btnDomicilio_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Blue;
-            this.panel11.Location = new System.Drawing.Point(0, 353);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 32);
-            this.panel11.TabIndex = 14;
             // 
             // subPaciente
             // 
@@ -347,6 +346,14 @@
             this.btnTipo.UseVisualStyleBackColor = false;
             this.btnTipo.Click += new System.EventHandler(this.btnTipo_Click);
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Blue;
+            this.panel11.Location = new System.Drawing.Point(0, 353);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(5, 32);
+            this.panel11.TabIndex = 14;
+            // 
             // btnEmpleado
             // 
             this.btnEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -375,9 +382,9 @@
             this.btnVacuna.ForeColor = System.Drawing.Color.White;
             this.btnVacuna.Image = ((System.Drawing.Image)(resources.GetObject("btnVacuna.Image")));
             this.btnVacuna.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVacuna.Location = new System.Drawing.Point(4, 453);
+            this.btnVacuna.Location = new System.Drawing.Point(12, 453);
             this.btnVacuna.Name = "btnVacuna";
-            this.btnVacuna.Size = new System.Drawing.Size(211, 32);
+            this.btnVacuna.Size = new System.Drawing.Size(203, 32);
             this.btnVacuna.TabIndex = 11;
             this.btnVacuna.Text = "Vacuna";
             this.btnVacuna.UseVisualStyleBackColor = false;
@@ -622,6 +629,43 @@
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(46, 651);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(123, 78);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // btnReceta
+            // 
+            this.btnReceta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnReceta.FlatAppearance.BorderSize = 0;
+            this.btnReceta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnReceta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceta.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceta.ForeColor = System.Drawing.Color.White;
+            this.btnReceta.Image = ((System.Drawing.Image)(resources.GetObject("btnReceta.Image")));
+            this.btnReceta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReceta.Location = new System.Drawing.Point(4, 502);
+            this.btnReceta.Name = "btnReceta";
+            this.btnReceta.Size = new System.Drawing.Size(210, 32);
+            this.btnReceta.TabIndex = 16;
+            this.btnReceta.Text = "Rceta";
+            this.btnReceta.UseVisualStyleBackColor = false;
+            this.btnReceta.Click += new System.EventHandler(this.btnReceta_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Blue;
+            this.panel18.Location = new System.Drawing.Point(0, 502);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(5, 32);
+            this.panel18.TabIndex = 17;
+            // 
             // frmMenumode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -647,6 +691,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -696,5 +741,8 @@
         private System.Windows.Forms.Button btnVacuna;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button btnEmpleado;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnReceta;
+        private System.Windows.Forms.Panel panel18;
     }
 }

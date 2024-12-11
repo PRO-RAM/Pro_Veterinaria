@@ -46,6 +46,25 @@ namespace Pro_Veterinaria.Formularios
             con.Close();
             return a;
         }
+        void obtener()
+        {
+            string consulta = $"select * from Servicios where id = {txtId.Text}";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                txtNombre.Text = reader["Nombre"].ToString();
+                txtDescripcion.Text = reader["Descripcion"].ToString();
+                txtPrecio.Text = reader["Costo"].ToString();
+                
+            }
+            else
+            {
+                MessageBox.Show("El ID ingresado no se encontro en los regristros.");
+            }
+            con.Close();
+        }
         void limpiar()
         {
             txtId.Clear();
@@ -104,7 +123,7 @@ namespace Pro_Veterinaria.Formularios
             }
             else
             {
-                encontro();
+                obtener();
                
             }
         }
