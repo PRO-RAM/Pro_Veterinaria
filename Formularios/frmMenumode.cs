@@ -61,6 +61,7 @@ namespace Pro_Veterinaria.Formularios
         private void btnHistorial_Click(object sender, EventArgs e)
         {
             subPaciente.Visible = false;
+            abrirformulario(new frmHistorial());
         }
 
         private void btnPaciente_Click(object sender, EventArgs e)

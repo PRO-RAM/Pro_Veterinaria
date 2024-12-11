@@ -85,7 +85,7 @@ namespace Pro_Veterinaria.Formularios
             x.Peso = decimal.Parse(txtPeso.Text);
             x.Edad = txtEdad.Text;
             x.idCliente = int.Parse(cbCliente.SelectedValue.ToString());
-            if (h.encontrar("Mascota", int.Parse(txtId.Text)) == true)
+            if (encontro() == true)
             {
                 MessageBox.Show(x.actualizar());
             }
@@ -102,7 +102,7 @@ namespace Pro_Veterinaria.Formularios
             Herramientas h = new Herramientas();
             Clases.Cliente x = new Clases.Cliente();
             x.Id = int.Parse(txtId.Text);
-            if (h.encontrar("Mascota", int.Parse(txtId.Text)) == true)
+            if (encontro() == true)
             {
                 MessageBox.Show(x.eliminar());
             }
