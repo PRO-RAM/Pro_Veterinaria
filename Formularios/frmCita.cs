@@ -147,5 +147,12 @@ namespace Pro_Veterinaria.Formularios
         {
             //cbMascota = Border3DSide  
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Indormes.frmRCita x = new Indormes.frmRCita();
+            x.ShowDialog();
+            
+        }
     }
 }

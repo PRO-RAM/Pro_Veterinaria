@@ -21,6 +21,7 @@ namespace Pro_Veterinaria.Clases
         public int idServicio;
         public decimal Total;
         //detalle
+        public int idReceta;
         public int ididServicio;
         public int idProducto;
         public int idVacuna;
@@ -36,7 +37,7 @@ namespace Pro_Veterinaria.Clases
         }
         public void guardar()
         {
-            string consulta = $"insert into Receta (id,Dianostico,idEmpleado,Mascota,idServicio,Total)values((select isnull(max(id)+1,1) from Receta),'{Dianostico}',{idEmpleado},'{Mascota}',{ididServicio},{Total})";
+            string consulta = $"insert into Receta (id,Dianostico,idEmpleado,Mascota,idServicio,Total)values ({Id},'{Dianostico}',{idEmpleado},'{Mascota}',{ididServicio},{Total})";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();
@@ -44,7 +45,7 @@ namespace Pro_Veterinaria.Clases
         }
         public void guardardetalle()
         {
-            string consulta = $" insert into Rect_det(id,idReceta,ididServicio,idProductos,idVacuna,Can_pro,Can_va,Pre_pro,Pre_va)values((select isnull(max(id)+1,1) from Rect_det),{Id},{ididServicio},{idProducto},{idVacuna},{can_pro},{can_va},{pre_pro},{pre_va})";
+            string consulta = $" insert into Rect_det(id,idReceta,idProductos,Can_pro,Pre_pro)values((select isnull(max(id)+1,1) from Rect_det),{Id},{idProducto},{can_pro},{pre_pro})";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();

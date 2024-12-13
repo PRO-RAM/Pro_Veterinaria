@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +36,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +72,12 @@
     </Compile>
     <Compile Include="Busquedas\frmBusquedaDomicilio.Designer.cs">
       <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaReceta.Designer.cs">
+      <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
     </Compile>
     <Compile Include="Busquedas\frmBusquedaTipo.cs">
       <SubType>Form</SubType>
@@ -77,6 +104,31 @@
     <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Clases\Tipo.cs" />
     <Compile Include="Clases\Vacuna.cs" />
+    <Compile Include="dsvCita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvCita.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsvRceta_Detalle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvRceta_Detalle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsvReseta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvReseta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="El_sasaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>El_sasaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="El_sasaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>El_sasaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,10 +213,25 @@
     <Compile Include="Formularios\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Indormes\frmRCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indormes\frmRCita.Designer.cs">
+      <DependentUpon>frmRCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Indormes\frmRreceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indormes\frmRreceta.Designer.cs">
+      <DependentUpon>frmRreceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Busquedas\frmBusquedaDomicilio.resx">
       <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaReceta.resx">
+      <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaTipo.resx">
       <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
@@ -214,6 +281,14 @@
     <EmbeddedResource Include="Formularios\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Indormes\frmRCita.resx">
+      <DependentUpon>frmRCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indormes\frmRreceta.resx">
+      <DependentUpon>frmRreceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indormes\rCita.rdlc" />
+    <EmbeddedResource Include="Indormes\Report1.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -223,6 +298,62 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dsvCita.xsc">
+      <DependentUpon>dsvCita.xsd</DependentUpon>
+    </None>
+    <None Include="dsvCita.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvCita.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvCita.xss">
+      <DependentUpon>dsvCita.xsd</DependentUpon>
+    </None>
+    <None Include="dsvRceta_Detalle.xsc">
+      <DependentUpon>dsvRceta_Detalle.xsd</DependentUpon>
+    </None>
+    <None Include="dsvRceta_Detalle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvRceta_Detalle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvRceta_Detalle.xss">
+      <DependentUpon>dsvRceta_Detalle.xsd</DependentUpon>
+    </None>
+    <None Include="dsvReseta.xsc">
+      <DependentUpon>dsvReseta.xsd</DependentUpon>
+    </None>
+    <None Include="dsvReseta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvReseta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvReseta.xss">
+      <DependentUpon>dsvReseta.xsd</DependentUpon>
+    </None>
+    <None Include="El_sasaDataSet.xsc">
+      <DependentUpon>El_sasaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="El_sasaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>El_sasaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="El_sasaDataSet.xss">
+      <DependentUpon>El_sasaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="El_sasaDataSet1.xsc">
+      <DependentUpon>El_sasaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="El_sasaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>El_sasaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="El_sasaDataSet1.xss">
+      <DependentUpon>El_sasaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,4 +369,10 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>

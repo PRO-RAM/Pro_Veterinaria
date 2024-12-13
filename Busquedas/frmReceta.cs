@@ -97,7 +97,7 @@ namespace Pro_Veterinaria.Busquedas
         {
             decimal precio = 0;
             string idproducto = cbProducto.SelectedValue.ToString();
-            string consulta = $"select Precio from Producto where id = '{idproducto}'";
+            string consulta = $"select Precio from Producto where id = {idproducto}";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -165,6 +165,34 @@ namespace Pro_Veterinaria.Busquedas
                 x.guardardetalle();
                 MessageBox.Show("Venta Guardada");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Busquedas.frmBusquedaReceta x = new Busquedas.frmBusquedaReceta();
+            x.ShowDialog();
+            if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                txtId.Text = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].id.ToString();
+                txtDianostico.Text = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].Dianostico.ToString();
+                txtMascota.Text = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].Mascota.ToString();
+                cbEmpleados.SelectedValue = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].idEmpleado.ToString();
+                cbServicios.SelectedValue = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].idServicio.ToString();
+                txtTotal.Text = x.el_sasaDataSet.Receta[x.recetaBindingSource.Position].Total.ToString();
+                dgReceta.DataSource = x.dsvRceta_Detalle.Rect_det;
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Indormes.frmRreceta x = new Indormes.frmRreceta();
+            x.ShowDialog();
         }
     }
 }
